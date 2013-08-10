@@ -55,6 +55,27 @@ img,video {
 	height: 100%;
 }
 
+.fitParent{
+	-webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    height: 100%;
+}
+
+.img1{
+ 	background: url(../images/0.jpg) no-repeat center;    
+}
+.img2{
+ 	background: url(../images/1.jpg) no-repeat center;    
+}
+.img3{
+ 	background: url(../images/2.jpg) no-repeat center;    
+}
+.img4{
+ 	background: url(../images/3.jpg) no-repeat center;    
+}
+
 .list {
 	top: 20em !important;
 }
