@@ -27,6 +27,12 @@
 			if($('.roundabout-in-focus').prev().length == 0){
 				$('ul.list li:last').click();
 			} 
+			
+		    $(this).animate({left: "-=300"}, 300);
+		    setTimeout(function() {
+		    	 $(".left_arrow").animate({left: "+=600", display: "none"}, 0);
+		    	 $(".left_arrow").animate({left: "-=300", display: "block"}, 300);
+			}, 100);
 		});
 		
 		$(".right_arrow").click(function() {
@@ -34,6 +40,12 @@
 			if($('.roundabout-in-focus').next().length == 0){
 				$('ul.list li:first').click();
 			}
+			
+			$(this).animate({right: "-=300"}, 300);
+		    setTimeout(function() {
+		    	 $(".right_arrow").animate({right: "+=600", display: "none"}, 0);
+		    	 $(".right_arrow").animate({right: "-=300", display: "block"}, 300);
+			}, 100);
 		});		
 		
 	});
@@ -56,7 +68,7 @@
 					<div class="itm1">
 						<img alt="img1" src="images/0.jpg" />
 						<div class="corner">&nbsp;</div>
-						<div class="overlay-footer">-CR PRADEEP...</div>
+						<div class="overlay-footer">CR PRADEEP...</div>
 					</div>
 
 					<div class="itm2">
@@ -70,7 +82,7 @@
 					<div class="itm1">
 						<img alt="img2" src="images/1.jpg" />
 						<div class="corner">&nbsp;</div>
-						<div class="overlay-footer">-CR PRADEEP...</div>
+						<div class="overlay-footer">CR PRADEEP...</div>
 					</div>
 
 					<div class="itm2">
@@ -84,7 +96,7 @@
 					<div class="itm1">
 						<img alt="img3" src="images/2.jpg" />
 						<div class="corner">&nbsp;</div>
-						<div class="overlay-footer">-CR PRADEEP...</div>
+						<div class="overlay-footer">CR PRADEEP...</div>
 					</div>
 
 					<div class="itm2">
@@ -98,7 +110,7 @@
 					<div class="itm1">
 						<img alt="img4" src="images/3.jpg" />
 						<div class="corner">&nbsp;</div>
-						<div class="overlay-footer">-CR PRADEEP...</div>
+						<div class="overlay-footer">CR PRADEEP...</div>
 					</div>
 
 					<div class="itm2">

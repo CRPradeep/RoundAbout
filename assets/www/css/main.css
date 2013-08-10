@@ -103,7 +103,12 @@ img,video {
 	color: black;
 	padding: 10px;
 	bottom: 0;
-	position: absolute;
+	position: absolute;	
+	background-color: rgba(0,0,0,0.1);
+}
+
+.roundabout-in-focus .overlay-footer{
+	text-shadow: 0 1px #999;
 	animation: fade 2000ms infinite;
 	-webkit-animation: fade 2000ms infinite;
 	background-color: rgba(0,0,0,0.3);
