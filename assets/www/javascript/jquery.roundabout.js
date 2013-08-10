@@ -434,8 +434,13 @@
 					self.children(data.childSelector)
 						.each(function(i) {
 							if (methods.updateChild.apply(self, [$(this), info, i, function() { $(this).trigger('ready'); }]) && (!info.animating || data.lastAnimationStep)) {
-								inFocus = i;
+								inFocus = i;								
 								$(this).addClass("roundabout-in-focus");
+								
+								var bubbleIndex = i+1;
+								$(".bubble").removeClass("active_bubble");
+								var ele = ".bubble:nth-child("+bubbleIndex+")";
+								$(ele).addClass("active_bubble");
 							} else {
 								$(this).removeClass("roundabout-in-focus");
 							}
