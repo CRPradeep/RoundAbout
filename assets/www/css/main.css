@@ -114,14 +114,14 @@ img,video {
 .description {
 	word-wrap: break-word;
 	margin: 10px;
-	color: white;
+	color: lavender;
 	font-style: italic;
 	display: block;
 }
 
 .overlay-footer {
 	width: 72.2%;
-	color: black;
+	color: white;
 	padding: 10px;
 	bottom: 0;
 	position: absolute;	
@@ -129,7 +129,7 @@ img,video {
 }
 
 .roundabout-in-focus .overlay-footer{
-	text-shadow: 0 1px #999;
+	text-shadow: 0 1px #000;
 	animation: fade 2000ms infinite;
 	-webkit-animation: fade 2000ms infinite;
 	background-color: rgba(0,0,0,0.3);
@@ -148,12 +148,12 @@ img,video {
 
 @keyframes fade {
 	from {opacity: 1.0; }
-	50% {opacity: 0.5; color:gray;}
+	50% {opacity: 0.5;}
 	to {opacity: 1.0; }
 }
 
 @-webkit-keyframes fade {
 	from {opacity: 1.0;	}
-	50% {opacity: 0.5; color:gray;}
+	50% {opacity: 0.5;}
 	to {opacity: 1.0; }
 }
