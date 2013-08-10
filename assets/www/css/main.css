@@ -1,0 +1,133 @@
+.roundabout-holder {
+	list-style: none;
+	padding: 0;
+	margin: auto;
+	height: 20%;
+	width: 30%;
+}
+
+.roundabout-moveable-item {
+	height: 20em;
+	width: 45em;
+	cursor: pointer;
+	background-color: #ccc;
+	border: 2px solid #999;
+	-webkit-box-shadow: 7px 7px 19px rgba(52, 50, 50, 0.75);
+	-moz-box-shadow: 7px 7px 19px rgba(52, 50, 50, 0.75);
+	box-shadow: 7px 7px 19px rgba(52, 50, 50, 0.75);
+}
+
+.roundabout-in-focus {
+	cursor: auto;
+}
+
+.root{
+	width:100%;
+    height: 100%;
+    text-align:center;
+    position: relative;
+}
+
+.left_arrow{
+	position: absolute;
+	left: 0;
+	top: 20em;
+	margin-left: 10em;
+	border-bottom: 15px solid transparent;
+	border-top: 15px solid transparent;
+	border-right: 15px solid #ccc;
+	cursor: pointer;
+}
+
+.right_arrow{	
+	position: absolute;
+	right: 0;
+	top: 20em;
+	margin-right: 10em;
+	border-bottom: 15px solid transparent;
+	border-top: 15px solid transparent;
+	border-left: 15px solid #ccc;
+	cursor: pointer;
+}
+
+img,video {
+	width: 100%;
+	height: 100%;
+}
+
+.list {
+	top: 20em !important;
+}
+
+.items {
+	height: 100%;
+}
+
+.itm1 {
+	height: 100%;
+	width: 75%;
+	float: left;
+}
+
+.itm2 {
+	height: 100%;
+	width: 25%;
+	float: right;
+	background: lightslategray;
+	text-align: center;
+}
+
+.title {
+	word-wrap: break-word;
+	text-shadow: 0 1px #ccc;
+	color: black;
+	font-weight: bold;
+	padding: 5px 0;
+	border-bottom: 1px solid tan;
+	display: block;
+	-webkit-box-shadow: 0px 10px 19px rgba(52, 50, 50, 0.75);
+	-moz-box-shadow: 0px 10px 19px rgba(52, 50, 50, 0.75);
+	box-shadow: 0px 15px 19px rgba(52, 50, 50, 0.75);
+}
+
+.description {
+	word-wrap: break-word;
+	margin: 10px;
+	color: white;
+	font-style: italic;
+	display: block;
+}
+
+.overlay-footer {
+	width: 72.2%;
+	color: black;
+	padding: 10px;
+	bottom: 0;
+	position: absolute;
+	animation: fade 2000ms infinite;
+	-webkit-animation: fade 2000ms infinite;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.corner {
+	position: absolute;
+	top: 0;
+	right: 25%;
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-bottom: transparent;
+	border-top: 30px solid lightslategray;
+}
+
+@keyframes fade {
+	from {opacity: 1.0; }
+	50% {opacity: 0.5; color:gray;}
+	to {opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+	from {opacity: 1.0;	}
+	50% {opacity: 0.5; color:gray;}
+	to {opacity: 1.0; }
+}

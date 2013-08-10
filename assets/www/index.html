@@ -1,0 +1,134 @@
+<!-- Copyright (c) 2012 Mobile Developer Solutions -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" name="viewport"
+	content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+
+<title>Image Slider</title>
+
+<link rel="stylesheet" href="css/main.css" />
+<!-- <link rel="stylesheet" href="css/jquery.ui.all.css" /> -->
+
+<script src="javascript/jquery-2.0.3.js"></script>
+<!-- <script src="javascript/jquery.ui.effect.js"></script>
+<script src="javascript/jquery.ui.effect-drop.js"></script> -->
+<script type="text/javascript" src="javascript/jquery.roundabout.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('ul').roundabout({
+			shape : "waterWheel"
+		});
+		
+		$(".left_arrow").click(function() {
+			/* $(this).effect("drop", {}, 300, callback); */
+			$('.roundabout-in-focus').prev().click();
+			if($('.roundabout-in-focus').prev().length == 0){
+				$('ul.list li:last').click();
+			} 
+		});
+		
+		$(".right_arrow").click(function() {
+			$('.roundabout-in-focus').next().click();
+			if($('.roundabout-in-focus').next().length == 0){
+				$('ul.list li:first').click();
+			}
+		});		
+		
+	});
+	
+	function callback() {
+		setTimeout(function() {
+			$(".left_arrow").hide().fadeIn();
+		}, 300);
+	};
+</script>
+</head>
+
+<body>
+<div class="root">
+	<div class="left_arrow"></div>
+	<div class="slider_block">
+		<ul class="list">
+			<li>
+				<div class="items">
+					<div class="itm1">
+						<img alt="img1" src="images/0.jpg" />
+						<div class="corner">&nbsp;</div>
+						<div class="overlay-footer">-CR PRADEEP...</div>
+					</div>
+
+					<div class="itm2">
+						<span class="title">Title 1.</span> <span class="description">Some
+							description about the image goes here...</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="items">
+					<div class="itm1">
+						<img alt="img2" src="images/1.jpg" />
+						<div class="corner">&nbsp;</div>
+						<div class="overlay-footer">-CR PRADEEP...</div>
+					</div>
+
+					<div class="itm2">
+						<span class="title">Title 2.</span> <span class="description">Some
+							description about the image goes here...</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="items">
+					<div class="itm1">
+						<img alt="img3" src="images/2.jpg" />
+						<div class="corner">&nbsp;</div>
+						<div class="overlay-footer">-CR PRADEEP...</div>
+					</div>
+
+					<div class="itm2">
+						<span class="title">Title 3.</span> <span class="description">Some
+							description about the image goes here...</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="items">
+					<div class="itm1">
+						<img alt="img4" src="images/3.jpg" />
+						<div class="corner">&nbsp;</div>
+						<div class="overlay-footer">-CR PRADEEP...</div>
+					</div>
+
+					<div class="itm2">
+						<span class="title">Title 4.</span> <span class="description">Some
+							description about the image goes here...</span>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="items">
+					<div class="itm1">
+						<video
+							poster="http://www.html5rocks.com/en/tutorials/video/basics/star.png"
+							controls>
+							<source
+								src="http://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm"
+								type='video/webm; codecs="vp8, vorbis"' />
+						</video>
+						<div class="corner">&nbsp;</div>
+					</div>
+
+					<div class="itm2">
+						<span class="title">Title 5.</span> <span class="description">Some
+							description about the video goes here...</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="right_arrow"></div>
+	</div>
+</body>
+</html>
