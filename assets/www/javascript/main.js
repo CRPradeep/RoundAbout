@@ -6,11 +6,13 @@ $(document).ready(function() {
 	$(".left_arrow").click(function() {
 		showPreviousImage();
 		animateLeftArrow();	
+		animateFooter();
 	});
 
 	$(".right_arrow").click(function() {
 		showNextImage();		
 		animateRightArrow();
+		animateFooter();
 	});		
 });
 
@@ -43,6 +45,13 @@ function animateRightArrow(){
 		$(".right_arrow").animate({right: "+=300", display: "none"}, 0);
 		$(".right_arrow").animate({right: "-=200", display: "block"}, 300);
 	}, 100);
+}
+
+function animateFooter(){
+	$(".overlay-footer").hide();
+	$(".overlay-footer").animate({
+	    height:'toggle'
+	}, 1000);
 }
 
 function highlightNavigatorBubble(){
