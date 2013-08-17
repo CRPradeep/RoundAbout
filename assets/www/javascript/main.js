@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function() {		
+	
 	$('.myList').roundabout({
 		shape : "waterWheel"
 	});
@@ -14,6 +15,8 @@ $(document).ready(function() {
 		animateRightArrow();
 		animateFooter();
 	});		
+
+	 myScroll = new iScroll('wrapper', { hScrollbar: false, vScrollbar: false });
 });
 
 
@@ -52,6 +55,10 @@ function animateFooter(){
 	$(".overlay-footer").animate({
 	    height:'toggle'
 	}, 1000);
+}
+
+function refreshIscroll(){
+	myScroll.refresh();
 }
 
 function highlightNavigatorBubble(){
