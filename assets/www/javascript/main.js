@@ -4,8 +4,6 @@ $(document).ready(function() {
 	});
 
 	$(".left_arrow").click(function() {
-		/* $(this).effect("drop", {}, 300, callback); */			
-
 		showPreviousImage();
 		animateLeftArrow();	
 	});
@@ -16,11 +14,6 @@ $(document).ready(function() {
 	});		
 });
 
-/*function callback() {
-	setTimeout(function() {
-		$(".left_arrow").hide().fadeIn();
-	}, 300);
-};*/
 
 function showPreviousImage(){
 	$('.roundabout-in-focus').prev().click();
@@ -55,7 +48,6 @@ function animateRightArrow(){
 function highlightNavigatorBubble(){
 	$(".roundabout-moveable-item").each(function(index){
 		if($(this).hasClass("roundabout-in-focus")){
-			alert(index);
 			$(".bubble").removeClass("active_bubble");
 			var ele = ".bubble:nth-child("+index+")";
 			$(ele).addClass("active_bubble");

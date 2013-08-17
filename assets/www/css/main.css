@@ -158,16 +158,17 @@ img,video {
 }
 
 .bubble{
-	width:7px;
-	height: 7px;
-	background: #ccc;
-	border: 1px solid #99a;
-	border-radius: 7px;
+	width: 10px;
+	height: 9px;
+	background: url("../images/Bubble.png") no-repeat center;
+	background-size: 100%;
 	margin: 1em;
 	float: left;
 }
 
 .active_bubble{
-	border: 1px solid black;
-	background: white;
+	width: 10px;
+	height: 9px;
+	background: url("../images/BubbleAct.png") no-repeat center;
+	background-size: 100%;
 }
