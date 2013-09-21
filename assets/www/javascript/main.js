@@ -1,38 +1,38 @@
 $(document).ready(function() {		
 	
 	$('.myList').roundabout({
-		shape : "waterWheel"
+		shape : "waterWheel",
+		btnNext : $(".right_arrow"),
+		btnNextCallback : animateFooter,
+		btnPrev : $(".left_arrow"),
+		btnPrevCallback : animateFooter,
+		btnToggleAutoplay : $(".toggleAutoPlayBtn"),
+		autoplayCallback : animateFooter,
+		autoplayDuration : 2000,
+		responsive: true,
 	});
 
 	$(".left_arrow").click(function() {
-		showPreviousImage();
 		animateLeftArrow();	
-		animateFooter();
 	});
 
 	$(".right_arrow").click(function() {
-		showNextImage();		
 		animateRightArrow();
-		animateFooter();
 	});		
+	
+	$(".togglePannelBtn").click(function(){
+		$(".buttonPannel").toggle(500);
+		$(".toggle_img").toggleClass("toggle_pannel_arrow");
+	});
 
+	$(".toggleAutoPlayBtn").click(function(){
+		$(".toggleAutoPlayBtn").val($(".toggleAutoPlayBtn").val() == "Start AutoPlay" ? "Stop AutoPlay" : "Start AutoPlay");
+	});
+	animateFooter();
+	handleScrollIcon();
+	
 	 myScroll = new iScroll('wrapper', { hScrollbar: false, vScrollbar: false });
 });
-
-
-function showPreviousImage(){
-	$('.roundabout-in-focus').prev().click();
-	if($('.roundabout-in-focus').prev().length == 0){
-		$('ul.myList li:last').click();
-	} 
-}
-
-function showNextImage(){
-	$('.roundabout-in-focus').next().click();
-	if($('.roundabout-in-focus').next().length == 0){
-		$('ul.myList li:first').click();
-	}
-}
 
 function animateLeftArrow(){
 	$(".left_arrow").animate({left: "-=100"}, 300);
@@ -51,10 +51,27 @@ function animateRightArrow(){
 }
 
 function animateFooter(){
+	/*$(".overlay-footer").hide();
+	$(".roundabout-in-focus").find(".overlay-footer").css('top', 0);
+	$(".roundabout-in-focus").find(".overlay-footer").animate({
+	    height:'toggle'
+	}, 1000, function(){
+		$(".roundabout-in-focus").find(".overlay-footer").css('top', '87.5%');
+		
+	});	*/
+	
 	$(".overlay-footer").hide();
-	$(".overlay-footer").animate({
+	$(".roundabout-in-focus").find(".overlay-footer").animate({
 	    height:'toggle'
 	}, 1000);
+}
+
+function handleScrollIcon(){
+	if($("#scroller").height() > $("#wrapper").height()){
+		$(".scrollIndicator").show();
+	}else{
+		$(".scrollIndicator").hide();
+	}
 }
 
 function refreshIscroll(){
